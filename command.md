@@ -21,3 +21,7 @@ srun -p cpu -N 2 --exclusive --pty /bin/bash
 ## scontrol
 查看预约节点
 scontrol show reservation
+
+## sacct
+查看历史作业信息
+sacct -u username -S 2022-01-23 -E now --field=jobid,partition,jobname,user,nnodes,nodelist,start,end,elapsed,state
